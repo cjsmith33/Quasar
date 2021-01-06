@@ -216,23 +216,26 @@ def play(credits):
     valid = ('c', 'p')
     result = 0
     loop = True
+    print('You have ' + str(credits) + ' credits.')
     while loop:
-        print('You have ' + str(credits) + ' credits.')
+        #print('You have ' + str(credits) + ' credits.')
         bet = get_bet(credits)
         result = session(bet)
+        #print('You have ' + str(credits) + ' credits.')
         credits = credits + result
         if credits == 0:
+            print('You have ' + str(credits) + ' credits.')
             print('You went broke.')
             loop = False
         else:
+            print('You have ' + str(credits) + ' credits.')
             choice = prompt(question, valid)
-            if choice = str('c')
-                print('play again')
-            else:
-                print("done")
-            loop = False
-            
-
+            if choice == str('c'):
+                print('You have ' + str(credits) + ' credits.')
+            elif choice == str('p'):
+                #print('You have ' + str(credits) + ' credits.')
+                print('You leave with ' +str(credits) + ' credits.')
+                loop = False
 
 # Script Code
 # DO NOT MODIFY BELOW THIS LINE
